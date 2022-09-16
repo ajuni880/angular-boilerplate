@@ -1,0 +1,37 @@
+*
+  box-sizing: border-box
+
+html, body
+  height: 100%
+
+body
+  font-family: var(--font-primary), BlinkMacSystemFont, -apple-system, Arial
+  color: var(--text-c)
+  margin: 0
+  text-rendering: optimizeLegibility
+
+
+a
+  text-decoration: underline
+  cursor: pointer
+
+p
+  line-height: 1.4
+  margin-top: 0
+  &:only-child
+    margin-bottom: 0
+
+ul
+  margin: 0
+  padding: 0
+
+input::-ms-reveal,
+input::-ms-clear
+  display: none
+
+[hidden]
+  display: none !important
+
+ul
+  list-style: none
+  padding-left: 0

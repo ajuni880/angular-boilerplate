@@ -1,0 +1,60 @@
+$textAlignmentsList: left, center, right
+
+@each $align in $textAlignmentsList
+  .text-#{$align}
+    text-align: $align
+
+$widthsList: ('no': 0, 'half': 50%, 'full': 100%, 'auto': auto)
+
+@each $k, $v in $widthsList
+  .#{$k}-width
+    width: $v
+
+$spacing: ('0': 0, 'xs': 8px, 'sm': 24px, 'md': 2rem, 'lg': 3rem)
+@each $k, $v in $spacing
+  .mt-#{$k}
+    margin-top: $v
+  .mr-#{$k}
+    margin-right: $v
+  .mb-#{$k}
+    margin-bottom: $v
+  .ml-#{$k}
+    margin-left: $v
+  .pt-#{$k}
+    padding-top: $v
+  .pr-#{$k}
+    padding-right: $v
+  .pb-#{$k}
+    padding-bottom: $v
+  .pl-#{$k}
+    padding-left: $v
+
+.mx-auto
+  margin-left: auto
+  margin-right: auto
+
+.my-auto
+  margin-top: auto
+  margin-bottom: auto
+
+.m-auto
+  margin: auto
+
+.d-block
+  display: block
+.d-inline
+  display: inline-block
+
+.f-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+.uppercase
+  text-transform: uppercase
+
+.pointer
+  cursor: pointer
+
+.no-wrap
+  white-space: nowrap

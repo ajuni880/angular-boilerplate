@@ -1,27 +1,44 @@
-# AngularBoilerplate
+# Angular Boilerplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Easy folder structure to follow
+- Lazy loading
+- Standalone components
+- Linting (eslint)
+- Import/order plugin to order imports
+- Styles following the SMACSS methdology
+- Husky with pre git commit hook
+- Analyze your bundles with webpack bundle analyzer
 
-## Code scaffolding
+## Structure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```txt
+app
+├── common - Contains all the shared code that is used across all the app. Without containing any components, pipes, directives.
+├── views - Contains lazy-loaded modules
+│     └── <ModuleName>
+│           ├── pages – The different views that are rendered in this specific module route
+│           └── services – Services for providing the necessary logic to the components
+├── core - it is imported and should be imported once in the app module. Contains the pipes, directives, services, validators,configuration loaders
+├── components - ui reusable components
+├── assets – Static public contents like images, fonts, etc.
+├── environments – Contains the different configurations for each environment
+└── styles – Contains all the styles for the app
+```
 
-## Build
+## Commands
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+analyze: Analyze your bundle stats
+<br><br>
+build: Build application
+<br><br>
+lint: Lint the code
+<br><br>
+lint:fix: Fix linting errors
+<br><br>
+start: Run the application for local development
+<br><br>
+test: Run tests

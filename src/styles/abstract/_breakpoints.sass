@@ -1,0 +1,22 @@
+// breakpoints
+$breakpointXSm: 599px
+$breakpointSm: 600px
+$breakpointMd: 960px
+$breakpointLg: 1280px
+$breakpointXl: 1920px
+
+@mixin mobile()
+  @media screen and (max-width: $breakpointXSm)
+    @content
+
+@mixin tablet()
+  @media screen and (min-width: $breakpointMd)
+    @content
+
+@mixin laptop()
+  @media screen and (min-width: $breakpointLg)
+    @content
+
+@mixin desktop()
+  @media screen and (min-width: $breakpointXl)
+    @content
